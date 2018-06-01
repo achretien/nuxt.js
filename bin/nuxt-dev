@@ -131,7 +131,7 @@ function startDev(oldInstance) {
             : Promise.resolve()
       )
       // Start listening
-      .then(() => nuxt.listen(port, host))
+      .then(() => nuxt.listen(port, host, nuxtConfig.https))
       // Pass new nuxt to watch chain
       .then(() => instance)
       // Handle errors
